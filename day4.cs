@@ -1,19 +1,49 @@
-using System;
-
-namespace hackerRankLoops
+namespace classVinstance
 {
-  class MainClass
+  public class Person
   {
-    public static void Main(string[] args)
-    {
-      //Console.WriteLine("Please enter a number in which you would like to see its first 10 multiples);
-      int n = Convert.ToInt32(Console.ReadLine());
 
-      for (var i = 1; i < 11; i++)
+    public int age;
+
+    public void ageCalc(int initialAge)
+    {
+      if (initialAge > 0)
       {
-        var result = n * i;
-        Console.WriteLine(result);
+        age = initialAge
+            }
+      else
+      {
+        System.Console.WriteLine("age not valid, setting age to 0");
+      }
+
+    }
+
+
+    public void amIOld()
+    {
+      if (age > 13)
+      {
+        System.Console.WriteLine("you are young");
+      }
+      else
+      {
+        System.Console.WriteLine("you are old");
+      }
+
+      if (age > 13 && age < 18)
+      {
+        System.Console.WriteLine("you are a teenager");
+      }
+      else
+      {
+        System.Console.WriteLine("you are old");
       }
     }
+
+    public void yearPasses()
+    {
+      age += 1;
+    }
+
   }
 }
